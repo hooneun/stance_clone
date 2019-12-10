@@ -1851,7 +1851,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      isOpen: false
+    };
+  }
+});
 
 /***/ }),
 
@@ -19505,27 +19525,138 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "nav",
+    "header",
+    {
+      staticClass:
+        "bg-black sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3"
+    },
     [
-      _c("router-link", { attrs: { to: "/" } }),
+      _c(
+        "div",
+        { staticClass: "flex items-center justify-between px-4 py-3 sm:p-0" },
+        [
+          _c("div"),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm:hidden" }, [
+            _c(
+              "button",
+              {
+                staticClass:
+                  "block text-gray-500 hover:text-white focus:text-shite focus:outline-none",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    _vm.isOpen = !_vm.isOpen
+                  }
+                }
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "h-6 w-6 fill-current",
+                    attrs: { viewBox: "0 0 24 24" }
+                  },
+                  [
+                    _vm.isOpen
+                      ? _c("path", {
+                          attrs: {
+                            "fill-rule": "evenodd",
+                            d:
+                              "M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                          }
+                        })
+                      : _vm._e(),
+                    _vm._v(" "),
+                    !_vm.isOpen
+                      ? _c("path", {
+                          attrs: {
+                            "fill-rule": "evenodd",
+                            d:
+                              "M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                          }
+                        })
+                      : _vm._e()
+                  ]
+                )
+              ]
+            )
+          ])
+        ]
+      ),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/man" } }, [_vm._v("MAN")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/women" } }, [_vm._v("WOMEN")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/kids" } }, [_vm._v("KIDS")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/gift_cards" } }, [
-        _vm._v("GIFT CARDS")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/subscription" } }, [
-        _vm._v("SUBSCRIPTION")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/discover" } }, [_vm._v("DISCOVER")])
-    ],
-    1
+      _c(
+        "nav",
+        {
+          staticClass: "px-2 pt-2 pb-4 sm:flex sm:p-0",
+          class: _vm.isOpen ? "block" : "hidden"
+        },
+        [
+          _c("router-link", { attrs: { to: "/" } }),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass:
+                "block px-2 py-1 text-white text-sm font-normal rounded hover:bg-gray-800",
+              attrs: { to: "/man" }
+            },
+            [_vm._v("MAN")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass:
+                "block px-2 py-1 text-white text-sm font-normal rounded hover:bg-gray-800",
+              attrs: { to: "/women" }
+            },
+            [_vm._v("WOMEN")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass:
+                "block px-2 py-1 text-white text-sm font-normal rounded hover:bg-gray-800",
+              attrs: { to: "/kids" }
+            },
+            [_vm._v("KIDS")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass:
+                "block px-2 py-1 text-white text-sm font-normal rounded hover:bg-gray-800",
+              attrs: { to: "/gift_cards" }
+            },
+            [_vm._v("GIFT CARDS")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass:
+                "block px-2 py-1 text-white text-sm font-normal rounded hover:bg-gray-800",
+              attrs: { to: "/subscription" }
+            },
+            [_vm._v("SUBSCRIPTION")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass:
+                "block px-2 py-1 text-white text-sm font-normal rounded hover:bg-gray-800",
+              attrs: { to: "/discover" }
+            },
+            [_vm._v("DISCOVER")]
+          )
+        ],
+        1
+      )
+    ]
   )
 }
 var staticRenderFns = []
